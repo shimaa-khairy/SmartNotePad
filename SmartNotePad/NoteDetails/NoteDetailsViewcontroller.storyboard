@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iz3-iy-dJ8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Note Details Viewcontroller-->
+        <scene sceneID="hpy-Rz-Q8t">
+            <objects>
+                <viewController storyboardIdentifier="NoteDetailsViewcontroller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Iz3-iy-dJ8" customClass="NoteDetailsViewcontroller" customModule="SmartNotepad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bh2-vD-Qmq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mec-ju-Mw4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIV-ks-TYa" userLabel="contentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Note Title Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m6-Lf-a35">
+                                                <rect key="frame" x="10" y="30" width="394" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tIx-g4-o59">
+                                                <rect key="frame" x="10" y="67" width="394" height="245.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="pholderLangKey" value="Note Body Here"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NdE-0f-5k9">
+                                                <rect key="frame" x="10" y="363" width="35" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="35" id="IZL-go-Yqa"/>
+                                                    <constraint firstAttribute="height" constant="35" id="PFy-uP-WZF"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1pw-rj-zBb">
+                                                <rect key="frame" x="10" y="413.5" width="35" height="32.5"/>
+                                                <color key="tintColor" red="0.68151897189999999" green="0.67286276820000002" blue="0.319645226" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1N-g0-2Pf">
+                                                <rect key="frame" x="55" y="365" width="349" height="30"/>
+                                                <state key="normal" title="Add Location">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addLocation:" destination="Iz3-iy-dJ8" eventType="touchUpInside" id="hL6-bf-Y7P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-wp-ZU3">
+                                                <rect key="frame" x="55" y="412.5" width="349" height="245.5"/>
+                                                <inset key="contentEdgeInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Add Photo">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addPhoto:" destination="Iz3-iy-dJ8" eventType="touchUpInside" id="jWp-TG-0RJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNN-cv-g2f">
+                                                <rect key="frame" x="157" y="668" width="100" height="30"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="yQh-d6-Nhp"/>
+                                                </constraints>
+                                                <state key="normal" title="Save">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="save:" destination="Iz3-iy-dJ8" eventType="touchUpInside" id="Ejx-KT-2Pf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="L1N-g0-2Pf" firstAttribute="leading" secondItem="NdE-0f-5k9" secondAttribute="trailing" constant="10" id="518-UG-CDc"/>
+                                            <constraint firstItem="1pw-rj-zBb" firstAttribute="height" secondItem="NdE-0f-5k9" secondAttribute="height" id="5Vq-4g-aj1"/>
+                                            <constraint firstItem="NdE-0f-5k9" firstAttribute="top" secondItem="tIx-g4-o59" secondAttribute="bottom" constant="50" id="6wv-x9-ToL"/>
+                                            <constraint firstAttribute="trailing" secondItem="4m6-Lf-a35" secondAttribute="trailing" constant="10" id="7wN-ud-0L4"/>
+                                            <constraint firstItem="1pw-rj-zBb" firstAttribute="top" secondItem="NdE-0f-5k9" secondAttribute="bottom" constant="15" id="7xJ-cA-Sl4"/>
+                                            <constraint firstItem="XNN-cv-g2f" firstAttribute="top" secondItem="pAZ-wp-ZU3" secondAttribute="bottom" constant="10" id="AdU-ad-bGC"/>
+                                            <constraint firstItem="NdE-0f-5k9" firstAttribute="leading" secondItem="4m6-Lf-a35" secondAttribute="leading" id="FXs-l7-wLJ"/>
+                                            <constraint firstAttribute="height" constant="1000" id="HDM-dE-59b"/>
+                                            <constraint firstItem="4m6-Lf-a35" firstAttribute="leading" secondItem="sIV-ks-TYa" secondAttribute="leading" constant="10" id="JMB-AG-WEX"/>
+                                            <constraint firstItem="1pw-rj-zBb" firstAttribute="width" secondItem="NdE-0f-5k9" secondAttribute="width" id="Jhx-ij-LCL"/>
+                                            <constraint firstItem="tIx-g4-o59" firstAttribute="leading" secondItem="4m6-Lf-a35" secondAttribute="leading" id="Jj0-cQ-T7c"/>
+                                            <constraint firstItem="pAZ-wp-ZU3" firstAttribute="trailing" secondItem="4m6-Lf-a35" secondAttribute="trailing" id="JzS-nc-pUY"/>
+                                            <constraint firstItem="pAZ-wp-ZU3" firstAttribute="leading" secondItem="1pw-rj-zBb" secondAttribute="trailing" constant="10" id="MJw-Pi-eFb"/>
+                                            <constraint firstItem="L1N-g0-2Pf" firstAttribute="centerY" secondItem="NdE-0f-5k9" secondAttribute="centerY" id="Obr-kU-8I7"/>
+                                            <constraint firstItem="L1N-g0-2Pf" firstAttribute="trailing" secondItem="4m6-Lf-a35" secondAttribute="trailing" id="TnA-Qd-axL"/>
+                                            <constraint firstItem="4m6-Lf-a35" firstAttribute="top" secondItem="sIV-ks-TYa" secondAttribute="top" constant="30" id="Wo9-uy-Fez"/>
+                                            <constraint firstItem="1pw-rj-zBb" firstAttribute="leading" secondItem="NdE-0f-5k9" secondAttribute="leading" id="f3t-R6-5um"/>
+                                            <constraint firstItem="XNN-cv-g2f" firstAttribute="centerX" secondItem="sIV-ks-TYa" secondAttribute="centerX" id="lpi-zK-BdW"/>
+                                            <constraint firstItem="tIx-g4-o59" firstAttribute="trailing" secondItem="4m6-Lf-a35" secondAttribute="trailing" id="mHT-Mo-x2Z"/>
+                                            <constraint firstItem="tIx-g4-o59" firstAttribute="top" secondItem="4m6-Lf-a35" secondAttribute="bottom" constant="15" id="rfc-Sp-NAV"/>
+                                            <constraint firstItem="pAZ-wp-ZU3" firstAttribute="top" secondItem="1pw-rj-zBb" secondAttribute="top" id="zIb-ls-H6a"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="sIV-ks-TYa" firstAttribute="leading" secondItem="1u1-iE-a5s" secondAttribute="leading" id="VPC-82-jHW"/>
+                                    <constraint firstItem="sIV-ks-TYa" firstAttribute="width" secondItem="7nX-xP-Ifi" secondAttribute="width" id="huf-Ld-JSR"/>
+                                    <constraint firstItem="sIV-ks-TYa" firstAttribute="top" secondItem="1u1-iE-a5s" secondAttribute="top" id="ihi-us-MIg"/>
+                                    <constraint firstItem="sIV-ks-TYa" firstAttribute="trailing" secondItem="1u1-iE-a5s" secondAttribute="trailing" constant="414" id="pjg-sm-MU4"/>
+                                    <constraint firstItem="sIV-ks-TYa" firstAttribute="bottom" secondItem="1u1-iE-a5s" secondAttribute="bottom" constant="818" id="tKr-AC-uFp"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="1u1-iE-a5s"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="7nX-xP-Ifi"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ub1-wk-QQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mec-ju-Mw4" firstAttribute="top" secondItem="Ub1-wk-QQc" secondAttribute="top" id="JlE-tN-iEB"/>
+                            <constraint firstItem="tIx-g4-o59" firstAttribute="height" secondItem="Ub1-wk-QQc" secondAttribute="height" multiplier="0.3" id="KBh-Hk-vRg"/>
+                            <constraint firstItem="Mec-ju-Mw4" firstAttribute="trailing" secondItem="Ub1-wk-QQc" secondAttribute="trailing" id="VIn-Ra-tDy"/>
+                            <constraint firstItem="pAZ-wp-ZU3" firstAttribute="height" secondItem="Ub1-wk-QQc" secondAttribute="height" multiplier="0.3" id="bQH-1V-qEm"/>
+                            <constraint firstItem="Mec-ju-Mw4" firstAttribute="leading" secondItem="Ub1-wk-QQc" secondAttribute="leading" id="hFE-fP-fVN"/>
+                            <constraint firstItem="Ub1-wk-QQc" firstAttribute="bottom" secondItem="Mec-ju-Mw4" secondAttribute="bottom" id="vlh-Ee-wFr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addLocationButton" destination="L1N-g0-2Pf" id="2Bv-fI-YwE"/>
+                        <outlet property="noteBody" destination="tIx-g4-o59" id="hS7-LT-bMJ"/>
+                        <outlet property="noteImageButton" destination="pAZ-wp-ZU3" id="ZNF-wq-qjm"/>
+                        <outlet property="noteTitle" destination="4m6-Lf-a35" id="Hr8-XX-KaY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLj-8q-H9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217.39130434782609" y="44.866071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mappin.circle" catalog="system" width="128" height="121"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
